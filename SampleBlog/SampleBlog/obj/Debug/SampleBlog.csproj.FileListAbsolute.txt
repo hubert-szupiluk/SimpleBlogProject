@@ -77,6 +77,6 @@ C:\Users\ABC123\SimpleBlogProject\SampleBlog\SampleBlog\bin\Microsoft.Owin.Secur
 C:\Users\ABC123\SimpleBlogProject\SampleBlog\SampleBlog\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\ABC123\SimpleBlogProject\SampleBlog\SampleBlog\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\ABC123\SimpleBlogProject\SampleBlog\SampleBlog\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\ABC123\SimpleBlogProject\SampleBlog\SampleBlog\obj\Debug\SampleBlog.csprojResolveAssemblyReference.cache
 C:\Users\ABC123\SimpleBlogProject\SampleBlog\SampleBlog\obj\Debug\SampleBlog.dll
 C:\Users\ABC123\SimpleBlogProject\SampleBlog\SampleBlog\obj\Debug\SampleBlog.pdb
+C:\Users\ABC123\SimpleBlogProject\SampleBlog\SampleBlog\obj\Debug\SampleBlog.csprojResolveAssemblyReference.cache

@@ -151,7 +151,11 @@ namespace SampleBlog.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email , Name = model.Name ,
+                    LastName = model.LastName , Type = model.Type ,
+                    PhoneNumber = model.PhoneNumber , Address = model.Address ,
+                    City = model.City };
+
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
