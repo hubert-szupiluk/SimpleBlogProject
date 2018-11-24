@@ -1,0 +1,28 @@
+﻿@model SampleBlog.Models.EditCommentModel
+
+@{
+    ViewBag.Title = "EditCommentForm";
+}
+
+<h2>Edit Comment</h2>
+
+<form action="/Comment/EditComment" method="post">
+    <div>
+        Title:
+        <input type="text" name="Title" value=@Model.Title>
+        <br><br>
+        <br>
+    </div>
+
+    <div>
+        Content:
+        <br />
+        <input type="text" name="Content" value=@Model.Content rows="10" cols="50"></input>
+        <input type="hidden" name="CommentID" value=@Model.CommentID rows="10" cols="50"></input>
+        <input type="submit" value="Edit comment">
+
+
+        <br><br>
+        <br>
+    </div>
+</form>

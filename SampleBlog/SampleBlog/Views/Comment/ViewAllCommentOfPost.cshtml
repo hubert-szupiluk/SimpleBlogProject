@@ -1,0 +1,31 @@
+﻿@model List<SampleBlog.Models.Comment>
+
+
+
+    @foreach (var x in Model)
+    {
+
+        @SampleBlog.Controllers.PostController.GenerateSignature(x.Post.UserID)
+        <br>
+        @x.Title
+        <br>
+        @x.Content
+        <br><br>
+
+
+        @if (Html.Action("CommentAuthorize", "Authorize", null).ToString() == "True")
+        {
+
+            <input type="button" value="Edit Comment" onclick="location.href='@Url.Action( "EditCommentForm" ,"Comment" , new SampleBlog.Models.EditCommentModel {CommentID = x.CommentId , Content = x.Content , Title = x.Title }  ) '" formmethod="post" />
+            <input type="button" value="Delete Comment" onclick="location.href='@Url.Action( "DeleteComment" ,"Comment" ,  new {@CommentID = x.CommentId } ) '" formmethod="post" />
+            <br><br>
+
+        }
+        <br><br>
+
+
+    }
+
+
+ 
+     

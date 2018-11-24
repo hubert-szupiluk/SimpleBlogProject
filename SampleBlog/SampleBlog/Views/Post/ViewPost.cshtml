@@ -1,0 +1,41 @@
+﻿@model SampleBlog.Models.Post
+
+@{
+    ViewBag.Title = "ViewPost";
+}
+
+<h2>@Model.Title</h2>
+<br>
+
+@Model.Content
+<br><br>
+@ViewBag.AuthorSignature
+<br><br>
+@SampleBlog.Controllers.PostController.GenerateTagString(Model.tags)
+<b> </b>
+<br />
+@Model.DateAdded
+
+
+@if (Html.Action("PostAuthorize", "Authorize", new { Model.PostId }).ToString() == "True")
+{
+    <br><br><br>
+    <input type="button" value="Delete Post" onclick="location.href='@Url.Action("DeletePost","Post",Model) '" formmethod="post" />
+    <br>
+    <input type="button" value="Edit Post" onclick="location.href='@Url.Action( "EditPostForm" ,"Post" , Model ) '" formmethod="post" />
+    <br>
+    <input type="button" value="Add Comment" onclick="location.href='@Url.Action( "AddCommentForm" ,"Comment" , Model ) '" formmethod="post" />
+    <br />
+    <br />
+}
+
+Rate:
+@Model.Rate<br />
+
+@Html.Partial("RateView") 
+
+
+
+
+<br><br><br>
+@Html.Partial("~/Views/Comment/ViewAllCommentOfPost.cshtml", Model.comments)

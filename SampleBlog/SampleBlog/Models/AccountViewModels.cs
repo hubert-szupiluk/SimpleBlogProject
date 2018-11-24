@@ -5,9 +5,9 @@ namespace SampleBlog.Models
 {
     public enum AccountType
     {
-        Writer,
-        Reader,
-        Moderator
+        Writer= 0,
+        Reader=1,
+        Moderator =2
     };
 
     public class ExternalLoginConfirmationViewModel
@@ -97,7 +97,7 @@ namespace SampleBlog.Models
 
         [Required]
         [Display(Name = "User Type")]
-        public AccountType Type;
+        public AccountType Type { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]

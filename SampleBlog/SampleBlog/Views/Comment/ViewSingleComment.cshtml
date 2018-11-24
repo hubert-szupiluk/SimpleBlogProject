@@ -1,0 +1,19 @@
+﻿@model SampleBlog.Models.Comment
+@{
+    ViewBag.Title = "ViewSingleComment";
+}
+
+<h2>ViewSingleComment</h2>
+
+
+@ViewBag.Signature
+<br>
+@Model.Title
+<br>
+@Model.Content
+@if (Html.Action("CommentAuthorize", "Authorize", null).ToString() == "True")
+{
+<br><br>
+<input type="button" value="Edit Comment" onclick="location.href='@Url.Action("EditCommentForm", "Comment", new SampleBlog.Models.EditCommentModel { CommentID = Model.CommentId, Content = Model.Content, Title = Model.Title }) '" formmethod="post" />
+<input type="button" value="Delete Comment" onclick="location.href='@Url.Action("DeleteComment", "Comment", new { @CommentID = Model.CommentId }) '" formmethod="post" />
+}

@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "AddCommentForm";
+}
+
+<h2>Add Comment</h2>
+
+<form action="/Comment/AddComment" method="post">
+    <div>
+        <div>
+            Title:
+            <input type="text" name="Title" placeholder="Put post title">
+            <br><br>
+            <br>
+        </div>
+
+        <div>
+            Content:
+            <br />
+            <input type="text" name="content" placeholder="Your comment text!" rows="10" cols="50"></input>
+            <br><br>
+            <br>
+        </div>
+
+        <div>
+            <br />
+            <input type="hidden" name="PostId" value=@ViewBag.PostID>
+            <br><br>
+            <br>
+        </div>
+
+        <div>
+            <br><br>
+            <input type="submit" value="Add Comment">
+        </div>
+    </div>
+
+</form>
+

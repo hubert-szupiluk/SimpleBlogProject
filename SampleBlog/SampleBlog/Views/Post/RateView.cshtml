@@ -1,0 +1,15 @@
+﻿@if (Html.Action("RateAuthorize", "Authorize", null).ToString() == "True")
+{
+    <b>Your rate:</b>
+    <form action="/Post/RatePost">
+        <input type="hidden" name="PostID" value=@Model.PostId />
+        <input type="radio" name="RateValue" value="1"><b> :1</b>
+        <input type="radio" name="RateValue" value="2"><b> :2</b>
+        <input type="radio" name="RateValue" value="3"><b> :3</b>
+        <input type="radio" name="RateValue" value="4"><b> :4</b>
+        <input type="radio" name="RateValue" value="5"><b> :5</b>
+
+
+        <input type="submit" value="Rate!">
+    </form>
+}

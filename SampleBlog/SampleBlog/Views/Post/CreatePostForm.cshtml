@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Create Post";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<p>AddPost</p>
+
+<div id="col-md-8">
+
+    <form action="/Post/CreatePost" method="post">
+        <div>
+            Title:
+            <input type="text" name="Title" placeholder="Put post title">
+            <br><br>
+            <br>
+
+        </div>
+
+        <div>
+            Content:
+            <br />
+            <input type="text" name="content" rows="10" cols="50"></input>
+            <br><br>
+            <br>
+
+        </div>
+
+
+        <div>
+            Tag:
+            <input type="text" name="tagstring" placeholder="Add tags, separate using comma">
+
+            <br><br>
+            <input type="submit" value="Create post">
+
+        </div>
+    </form>
+</div>
+
+

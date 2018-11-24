@@ -1,0 +1,45 @@
+﻿@model SampleBlog.Models.Post
+@{
+    ViewBag.Title = "Edit Post";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<p>Edit post</p>
+
+<div id="col-md-8">
+
+    <form action="/Post/EditPost" method="post">
+        <div>
+            Title:
+            <input type="text" name="Title" value=@Model.Title>
+            <br><br>
+            <br>
+
+        </div>
+
+        <div>
+            Content:
+            <br />
+            <input type="text" name="content" value=@Model.Content rows="10" cols="50"></input>
+            <br><br>
+            <br>
+
+        </div>
+
+        <div>
+            Tag:
+            <input type="text" name="tagstring" value=@SampleBlog.Controllers.PostController.GenerateTagString(Model.tags)>
+
+            <div>
+                <input type="hidden" name="PostId" value=@Model.PostId> <input />
+            </div>
+
+
+            <br><br>
+            <input type="submit" value="Edit post">
+
+        </div>
+    </form>
+</div>
+
+
